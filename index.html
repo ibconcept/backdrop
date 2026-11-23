@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backdrop.online | Advertising Bidding Marketplace & Agent</title>
+    
+    <meta name="description" content="backdrop.online is the advertising bidding marketplace connecting corporate brands with physical event backdrops, YouTube creators, TikTokers, IG influencers, FB pages, blogs, and website ad placements.">
+    <link rel="canonical" href="https://backdrop.online/">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="backdrop.online">
+    <meta property="og:url" content="https://backdrop.online/">
+    <meta property="og:title" content="backdrop.online | Physical & Digital Advertising Bidding Agent">
+    <meta property="og:description" content="Bid on high-visibility physical event backdrops, YouTube sponsorships, TikTok/IG reach, Google Ads content, and blogs.">
+    <meta property="og:image" content="https://placehold.co/1200x630/e11d48/ffffff?text=backdrop.online">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="backdrop.online | Omnichannel Advertising Bidding Marketplace">
+    <meta name="twitter:description" content="Connect corporate advertisers with physical event backdrops, high-view social channels, websites, and blogs.">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/e11d48/ffffff?text=backdrop.online">
+
+    <!-- Google Fonts & Tailwind CSS CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            800: '#9f1239',
+                            900: '#881337',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans leading-relaxed selection:bg-brand-600 selection:text-white">
+
+    <!-- NAVIGATION HEADER -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-rose-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-700 via-brand-600 to-pink-500 text-white font-mono font-bold text-xl flex items-center justify-center shadow-md shadow-brand-600/30 group-hover:scale-105 transition">
+                    b.
+                </div>
+                <div>
+                    <span class="font-extrabold text-xl tracking-tight text-slate-900">backdrop<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-pink-600">.online</span></span>
+                    <span class="block text-[10px] uppercase tracking-wider font-mono text-brand-700 font-semibold -mt-1">Ad Bidding Marketplace</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-600">
+                <a href="#qualification" class="hover:text-brand-600 transition">Qualifications</a>
+                <a href="#marketplace" class="hover:text-brand-600 transition">Ad Marketplace</a>
+                <a href="#advertisers" class="hover:text-brand-600 transition">For Corporate</a>
+                <a href="#creators" class="hover:text-brand-600 transition">For Creators</a>
+                <a href="#google-ads" class="hover:text-brand-600 transition">Google Ads & Blogs</a>
+                <a href="#blog" class="hover:text-brand-600 transition">Blog</a>
+            </nav>
+
+            <!-- Desktop Action CTA Buttons -->
+            <div class="hidden md:flex items-center space-x-3">
+                <button onclick="openLoginModal()" class="px-3.5 py-2 text-xs font-bold text-slate-700 hover:text-brand-600 transition">
+                    Log In
+                </button>
+                <button onclick="openCreatorModal()" class="px-4 py-2 text-xs font-bold text-brand-700 bg-rose-100 hover:bg-rose-200 rounded-xl transition">
+                    Join as Creator
+                </button>
+                <button onclick="openAdvertiserModal()" class="px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-brand-600 via-rose-600 to-pink-600 hover:from-brand-700 hover:to-pink-700 rounded-xl shadow-md shadow-brand-600/25 transition">
+                    Post Campaign
+                </button>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-700 hover:text-brand-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-rose-100 px-4 pt-3 pb-6 space-y-3 shadow-lg">
+            <a href="#qualification" onclick="toggleMobileMenu()" class="block text-sm font-bold text-slate-700 hover:text-brand-600 py-1">Qualifications & Eligibility</a>
+            <a href="#marketplace" onclick="toggleMobileMenu()" class="block text-sm font-bold text-slate-700 hover:text-brand-600 py-1">Ad Marketplace</a>
+            <a href="#advertisers" onclick="toggleMobileMenu()" class="block text-sm font-bold text-slate-700 hover:text-brand-600 py-1">For Corporate Brands</a>
+            <a href="#creators" onclick="toggleMobileMenu()" class="block text-sm font-bold text-slate-700 hover:text-brand-600 py-1">For Creators & Hosts</a>
+            <a href="#google-ads" onclick="toggleMobileMenu()" class="block text-sm font-bold text-slate-700 hover:text-brand-600 py-1">Google Ads & Blogs</a>
+            <a href="#blog" onclick="toggleMobileMenu()" class="block text-sm font-bold text-slate-700 hover:text-brand-600 py-1">Insights & Blog</a>
+            <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+                <button onclick="toggleMobileMenu(); openCreatorModal();" class="w-full py-2.5 text-xs font-bold text-brand-700 bg-rose-100 rounded-xl">Join as Creator / Host</button>
+                <button onclick="toggleMobileMenu(); openAdvertiserModal();" class="w-full py-2.5 text-xs font-bold text-white bg-gradient-to-r from-brand-600 to-pink-600 rounded-xl shadow-sm">Post Corporate Campaign</button>
+                <button onclick="toggleMobileMenu(); openLoginModal();" class="w-full py-2 text-xs font-bold text-slate-600">Account Login</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="relative pt-10 pb-16 lg:pt-16 lg:pb-24 bg-gradient-to-br from-rose-50 via-white to-pink-50 border-b border-rose-100 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-4xl mx-auto">
+                    
+                    <!-- Top Pill -->
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-rose-100 to-pink-100 border border-rose-200 text-brand-800 text-xs font-bold uppercase tracking-wider mb-6 shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+                        <span>Advertising Agent & Bidding Marketplace</span>
+                    </div>
+
+                    <!-- Main Pitch Title -->
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
+                        Connect Corporate Brands with <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-red-600 to-pink-600">Physical Backdrops</span>, Social Stars & Digital Reach.
+                    </h1>
+
+                    <!-- Body Pitch Copy -->
+                    <p class="mt-5 text-base sm:text-lg text-slate-600 font-medium max-w-3xl mx-auto leading-relaxed">
+                        The ultimate bidding agent for high-impact advertising. We bridge corporate advertisers with high-traffic physical event backdrops, YouTube, TikTok, Instagram, Facebook, Google Ads placements, and sponsored blog posts.
+                    </p>
+
+                    <!-- Dual Action Buttons -->
+                    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+                        <button onclick="openAdvertiserModal()" class="w-full sm:w-auto px-7 py-3.5 text-sm font-bold text-white bg-gradient-to-r from-brand-600 via-red-600 to-pink-600 hover:from-brand-700 hover:to-pink-700 rounded-xl shadow-lg shadow-brand-600/30 transition flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h18"></path></svg>
+                            Corporate Advertiser Brief
+                        </button>
+                        <button onclick="openCreatorModal()" class="w-full sm:w-auto px-7 py-3.5 text-sm font-bold text-slate-800 bg-white hover:bg-rose-50 border border-rose-200 rounded-xl shadow-sm transition flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                            List Event Space / Channel
+                        </button>
+                    </div>
+
+                    <!-- Platform Coverage Badges -->
+                    <div class="mt-10 pt-6 border-t border-rose-200/60 flex flex-wrap items-center justify-center gap-3 text-xs font-bold text-slate-700">
+                        <span class="px-3 py-1 bg-white border border-rose-200 rounded-lg shadow-2xs">🏛️ Physical Event Backdrops</span>
+                        <span class="px-3 py-1 bg-white border border-rose-200 rounded-lg shadow-2xs">📹 YouTube Integrations</span>
+                        <span class="px-3 py-1 bg-white border border-rose-200 rounded-lg shadow-2xs">🎵 TikTok Creators</span>
+                        <span class="px-3 py-1 bg-white border border-rose-200 rounded-lg shadow-2xs">📸 Instagram Reels</span>
+                        <span class="px-3 py-1 bg-white border border-rose-200 rounded-lg shadow-2xs">👍 Facebook Pages</span>
+                        <span class="px-3 py-1 bg-white border border-rose-200 rounded-lg shadow-2xs">🌐 Websites & Google Ads</span>
+                        <span class="px-3 py-1 bg-white border border-rose-200 rounded-lg shadow-2xs">✍️ Sponsored Blog Posts</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK ELIGIBILITY & QUALIFICATION CHECKER -->
+        <section id="qualification" class="py-12 bg-white border-b border-rose-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-gradient-to-r from-rose-900 via-brand-900 to-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-48 h-48 bg-pink-500/20 rounded-full blur-2xl pointer-events-none"></div>
+
+                    <div class="text-center max-w-2xl mx-auto mb-8">
+                        <span class="text-pink-400 font-mono text-xs font-bold uppercase tracking-widest">Fast Qualification Tool</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold mt-1">Are You Qualified to List on backdrop.online?</h2>
+                        <p class="text-xs sm:text-sm text-slate-300 mt-2">
+                            To protect corporate brand quality, backdrop.online enforces qualification thresholds: <strong>Minimum 5,000+ Followers</strong> or <strong>25,000+ Monthly Views/Footfall</strong>.
+                        </p>
+                    </div>
+
+                    <!-- Interactive Eligibility Form -->
+                    <form onsubmit="checkQualification(event)" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                        <div>
+                            <label class="block text-slate-300 font-bold mb-1">Your Role / Channel</label>
+                            <select id="qual-type" class="w-full px-3 py-2.5 bg-slate-800 text-white rounded-xl border border-slate-700 focus:outline-none focus:border-pink-500">
+                                <option value="creator">Social Influencer / Creator</option>
+                                <option value="event">Physical Event Host (Backdrop)</option>
+                                <option value="publisher">Website / Blog Publisher</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-slate-300 font-bold mb-1">Primary Platform</label>
+                            <select id="qual-platform" class="w-full px-3 py-2.5 bg-slate-800 text-white rounded-xl border border-slate-700 focus:outline-none focus:border-pink-500">
+                                <option value="YouTube">YouTube</option>
+                                <option value="TikTok">TikTok</option>
+                                <option value="Instagram">Instagram</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="Backdrop">Physical Backdrop Wall</option>
+                                <option value="Blog">Website / Blog Article</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-slate-300 font-bold mb-1">Followers / Monthly Views</label>
+                            <input type="number" id="qual-count" placeholder="e.g. 15000" required class="w-full px-3 py-2.5 bg-slate-800 text-white rounded-xl border border-slate-700 focus:outline-none focus:border-pink-500 font-mono">
+                        </div>
+
+                        <div>
+                            <label class="block text-slate-300 font-bold mb-1">Country / Region</label>
+                            <select id="qual-country" class="w-full px-3 py-2.5 bg-slate-800 text-white rounded-xl border border-slate-700 focus:outline-none focus:border-pink-500">
+                                <option value="Kenya">Kenya</option>
+                                <option value="East Africa">East Africa (UG, TZ, RW)</option>
+                                <option value="Nigeria">Nigeria / West Africa</option>
+                                <option value="South Africa">South Africa</option>
+                                <option value="Global">Global / Worldwide</option>
+                            </select>
+                        </div>
+
+                        <div class="sm:col-span-2 lg:col-span-4 mt-2">
+                            <button type="submit" class="w-full py-3 bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-bold text-sm rounded-xl shadow-lg transition">
+                                Calculate Qualification & Estimated Placement Rate
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Eligibility Result Output -->
+                    <div id="qual-result" class="hidden mt-6 p-4 rounded-2xl bg-white/10 border border-white/20 text-xs text-center space-y-2">
+                        <span id="qual-status-badge" class="inline-block px-3 py-1 rounded-full text-xs font-bold font-mono"></span>
+                        <p id="qual-status-msg" class="text-sm font-semibold text-white"></p>
+                        <div id="qual-cta-box" class="pt-2"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- BIDDING MARKETPLACE SECTION -->
+        <section id="marketplace" class="py-16 bg-slate-50 border-b border-rose-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+                    <div>
+                        <span class="text-brand-600 font-bold uppercase tracking-wider text-xs">Live Bidding & Deals</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Explore Available Inventory</h2>
+                    </div>
+
+                    <!-- Category Filter Tabs -->
+                    <div class="mt-4 md:mt-0 flex flex-wrap gap-1.5 bg-white p-1.5 rounded-2xl border border-rose-200 shadow-xs" id="channel-tabs">
+                        <button onclick="filterMarketplace('all')" id="tab-all" class="m-tab px-3 py-1.5 text-xs font-bold rounded-xl transition bg-gradient-to-r from-brand-600 to-pink-600 text-white shadow-xs">All Slots</button>
+                        <button onclick="filterMarketplace('backdrop')" id="tab-backdrop" class="m-tab px-3 py-1.5 text-xs font-semibold rounded-xl text-slate-600 hover:text-brand-600 transition">🏛️ Backdrops</button>
+                        <button onclick="filterMarketplace('youtube')" id="tab-youtube" class="m-tab px-3 py-1.5 text-xs font-semibold rounded-xl text-slate-600 hover:text-brand-600 transition">📹 YouTube</button>
+                        <button onclick="filterMarketplace('tiktok')" id="tab-tiktok" class="m-tab px-3 py-1.5 text-xs font-semibold rounded-xl text-slate-600 hover:text-brand-600 transition">🎵 TikTok</button>
+                        <button onclick="filterMarketplace('social')" id="tab-social" class="m-tab px-3 py-1.5 text-xs font-semibold rounded-xl text-slate-600 hover:text-brand-600 transition">📸 IG & FB</button>
+                        <button onclick="filterMarketplace('web')" id="tab-web" class="m-tab px-3 py-1.5 text-xs font-semibold rounded-xl text-slate-600 hover:text-brand-600 transition">🌐 Web & Blogs</button>
+                    </div>
+                </div>
+
+                <!-- Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="marketplace-grid">
+                    
+                    <!-- Card 1: Physical Backdrop -->
+                    <div class="m-card backdrop bg-white rounded-2xl border border-rose-100 p-5 shadow-sm hover:border-brand-500 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="bg-rose-100 text-brand-800 text-[10px] font-bold px-2.5 py-0.5 rounded-full font-mono">Physical Backdrop</span>
+                                <span class="text-[11px] font-mono text-slate-400">Kenya • Corporate</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-lg">East Africa Tech Expo 2027</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">Sarit Expo Centre • Main Press Conference & Stage Backdrop</p>
+
+                            <div class="my-4 p-3 bg-rose-50/50 rounded-xl border border-rose-100 space-y-1.5 text-xs">
+                                <div class="flex justify-between"><span class="text-slate-500">Audience Reach:</span><strong class="text-slate-800">6,500 On-Site + 1.5M TV/Live</strong></div>
+                                <div class="flex justify-between"><span class="text-slate-500">Placement:</span><strong class="text-slate-800">Center Logo Grid Wall</strong></div>
+                                <div class="flex justify-between"><span class="text-slate-500">Field:</span><strong class="text-slate-800">Tech & Finance</strong></div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="block text-[10px] text-slate-400 font-mono uppercase">Current High Bid</span>
+                                <span class="text-lg font-extrabold text-brand-600 font-mono" id="card-bid-1">KSh 210,000</span>
+                            </div>
+                            <button onclick="openBidModal('1', 'East Africa Tech Expo Backdrop', 210000)" class="px-4 py-2 bg-gradient-to-r from-brand-600 to-pink-600 text-white text-xs font-bold rounded-xl shadow-xs hover:opacity-95">Place Bid</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: YouTube Integration -->
+                    <div class="m-card youtube bg-white rounded-2xl border border-rose-100 p-5 shadow-sm hover:border-brand-500 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="bg-red-100 text-red-800 text-[10px] font-bold px-2.5 py-0.5 rounded-full font-mono">YouTube Creator</span>
+                                <span class="text-[11px] font-mono text-slate-400">520K Subscribers</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-lg">Tech & Gadgets Unboxed</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">Studio Physical Backdrop Logo + 60s Dedicated Segment</p>
+
+                            <div class="my-4 p-3 bg-rose-50/50 rounded-xl border border-rose-100 space-y-1.5 text-xs">
+                                <div class="flex justify-between"><span class="text-slate-500">Monthly Views:</span><strong class="text-slate-800">480,000+ Verified</strong></div>
+                                <div class="flex justify-between"><span class="text-slate-500">Audience:</span><strong class="text-slate-800">24-38 yrs • East Africa & SA</strong></div>
+                                <div class="flex justify-between"><span class="text-slate-500">Field:</span><strong class="text-slate-800">Consumer Electronics & Fintech</strong></div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="block text-[10px] text-slate-400 font-mono uppercase">Starting Offer</span>
+                                <span class="text-lg font-extrabold text-brand-600 font-mono">KSh 75,000</span>
+                            </div>
+                            <button onclick="openAdvertiserModalWithPreselect('YouTube - Tech & Gadgets Unboxed')" class="px-4 py-2 bg-slate-900 text-white text-xs font-bold rounded-xl hover:bg-slate-800">Book Slot</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: TikTok Creator Campaign -->
+                    <div class="m-card tiktok bg-white rounded-2xl border border-rose-100 p-5 shadow-sm hover:border-brand-500 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="bg-pink-100 text-pink-800 text-[10px] font-bold px-2.5 py-0.5 rounded-full font-mono">TikTok Star</span>
+                                <span class="text-[11px] font-mono text-slate-400">890K Followers</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-lg">Nairobi Vibe & Trends</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">Physical Backdrop Placement in Studio + 3 Video Skits</p>
+
+                            <div class="my-4 p-3 bg-rose-50/50 rounded-xl border border-rose-100 space-y-1.5 text-xs">
+                                <div class="flex justify-between"><span class="text-slate-500">Avg Video Views:</span><strong class="text-slate-800">220,000 per video</strong></div>
+                                <div class="flex justify-between"><span class="text-slate-500">Country:</span><strong class="text-slate-800">Kenya & Regional</strong></div>
+                                <div class="flex justify-between"><span class="text-slate-500">Field:</span><strong class="text-slate-800">Lifestyle, Telco, FMCG</strong></div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="block text-[10px] text-slate-400 font-mono uppercase">Campaign Rate</span>
+                                <span class="text-lg font-extrabold text-brand-600 font-mono">KSh 95,000</span>
+                            </div>
+                            <button onclick="openAdvertiserModalWithPreselect('TikTok - Nairobi Vibe')" class="px-4 py-2 bg-gradient-to-r from-brand-600 to-pink-600 text-white text-xs font-bold rounded-xl shadow-xs">Apply Deal</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Instagram & Facebook Multi-Post -->
+                    <div class="m-card social bg-white rounded-2xl border border-rose-100 p-5 shadow-sm hover:border-brand-500 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="bg-rose-100 text-brand-800 text-[10px] font-bold px-2.5 py-0.5 rounded-full font-mono">IG & FB Network</span>
+                                <span class="text-[11px] font-mono text-slate-400">340K Reach</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-lg">East Africa Business Digest</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">Corporate Carousel Banner + Backdrop Media Interview Feature</p>
+
+                            <div class="my-4 p-3 bg-rose-50/50 rounded-xl border border-rose-100 space-y-1.5 text-xs">
+                                <div class="flex justify-between"><span class="text-slate-500">Monthly Impressions:</span><strong class="text-slate-800">1.1 Million</strong></div>
+                                <div class="flex justify-between"><span class="text-slate-500">Demographic:</span><strong class="text-slate-800">Corporate Executives & Founders</strong></div>
+                                <div class="flex justify-between"><span class="text-slate-500">Field:</span><strong class="text-slate-800">B2B, Banking, Real Estate</strong></div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="block text-[10px] text-slate-400 font-mono uppercase">Campaign Package</span>
+                                <span class="text-lg font-extrabold text-brand-600 font-mono">KSh 80,000</span>
+                            </div>
+                            <button onclick="openAdvertiserModalWithPreselect('IG/FB - Business Digest')" class="px-4 py-2 bg-slate-900 text-white text-xs font-bold rounded-xl hover:bg-slate-800">Book Slot</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Website & Google Ads Content -->
+                    <div class="m-card web bg-white rounded-2xl border border-rose-100 p-5 shadow-sm hover:border-brand-500 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="bg-indigo-100 text-indigo-800 text-[10px] font-bold px-2.5 py-0.5 rounded-full font-mono">Web & Google Ads</span>
+                                <span class="text-[11px] font-mono text-slate-400">1.8M Monthly Visits</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-lg">Pan-African Tech & News Portal</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">Sticky Top Backdrop Banner + Sponsored Article & Google Ad Network</p>
+
+                            <div class="my-4 p-3 bg-rose-50/50 rounded-xl border border-rose-100 space-y-1.5 text-xs">
+                                <div class="flex justify-between"><span class="text-slate-500">Placement Type:</span><strong class="text-slate-800">Native Web Header & Article</strong></div>
+                                <div class="flex justify-between"><span class="text-slate-500">Region:</span><strong class="text-slate-800">Kenya, SA, Nigeria, UK</strong></div>
+                                <div class="flex justify-between"><span class="text-slate-500">Field:</span><strong class="text-slate-800">General News, Business & Innovation</strong></div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="block text-[10px] text-slate-400 font-mono uppercase">Weekly Rate</span>
+                                <span class="text-lg font-extrabold text-brand-600 font-mono">KSh 110,000</span>
+                            </div>
+                            <button onclick="openAdvertiserModalWithPreselect('Web Portal & Google Ads')" class="px-4 py-2 bg-gradient-to-r from-brand-600 to-pink-600 text-white text-xs font-bold rounded-xl shadow-xs">Reserve Placement</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Physical Backdrop Auction -->
+                    <div class="m-card backdrop bg-white rounded-2xl border border-rose-100 p-5 shadow-sm hover:border-brand-500 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="bg-rose-100 text-brand-800 text-[10px] font-bold px-2.5 py-0.5 rounded-full font-mono">Physical Backdrop</span>
+                                <span class="text-[11px] font-mono text-slate-400">Closes in 6 hrs</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-lg">East Africa Fashion Week VIP Wall</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">Villa Rosa Kempinski • VIP Red Carpet Backdrop</p>
+
+                            <div class="my-4 p-3 bg-rose-50/50 rounded-xl border border-rose-100 space-y-1.5 text-xs">
+                                <div class="flex justify-between"><span class="text-slate-500">On-Site Footfall:</span><strong class="text-slate-800">1,200 High-Net-Worth VIPs</strong></div>
+                                <div class="flex justify-between"><span class="text-slate-500">Press Coverage:</span><strong class="text-slate-800">12 TV Channels & Magazines</strong></div>
+                                <div class="flex justify-between"><span class="text-slate-500">Field:</span><strong class="text-slate-800">Fashion, Luxury, Beverage</strong></div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="block text-[10px] text-slate-400 font-mono uppercase">Current High Bid</span>
+                                <span class="text-lg font-extrabold text-brand-600 font-mono" id="card-bid-6">KSh 320,000</span>
+                            </div>
+                            <button onclick="openBidModal('6', 'EA Fashion Week Red Carpet Backdrop', 320000)" class="px-4 py-2 bg-gradient-to-r from-brand-600 to-pink-600 text-white text-xs font-bold rounded-xl shadow-xs">Place Bid</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FOR CORPORATE ADVERTISERS & CREATORS INFO SECTION -->
+        <section id="advertisers" class="py-16 bg-white border-b border-rose-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left: Corporate Advertiser Pitch -->
+                    <div class="space-y-4">
+                        <span class="text-brand-600 font-bold uppercase tracking-wider text-xs">Corporate & Brand Buying</span>
+                        <h2 class="text-3xl font-extrabold text-slate-900 leading-tight">Your Direct Agent for Premium Physical & Social Ad Bidding</h2>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Stop chasing individual influencers or negotiating manually with event venues. <strong>backdrop.online</strong> acts as your corporate advertising agent, allowing you to bid on and secure exclusive branding slots across physical press walls, YouTube studios, TikTok creators, and digital web portals in one unified campaign brief.
+                        </p>
+
+                        <div class="space-y-3 pt-2">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-rose-100 text-brand-600 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</div>
+                                <p class="text-xs sm:text-sm text-slate-700"><strong>Guaranteed Brand Safety & Qualification:</strong> All inventory owners are vetted for minimum views, follower benchmarks, and country relevance.</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-rose-100 text-brand-600 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</div>
+                                <p class="text-xs sm:text-sm text-slate-700"><strong>Omnichannel Visibility:</strong> Combine physical event backdrop presence with online retargeting across YouTube, IG, FB, and Google Ads.</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-rose-100 text-brand-600 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</div>
+                                <p class="text-xs sm:text-sm text-slate-700"><strong>Transparent Bidding & Invoicing:</strong> Clear reserve prices, competitive bids, and consolidated corporate receipts.</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <button onclick="openAdvertiserModal()" class="px-6 py-3 bg-gradient-to-r from-brand-600 via-rose-600 to-pink-600 text-white font-bold text-xs rounded-xl shadow-md hover:shadow-lg transition">
+                                Launch Corporate Advertiser Campaign &rarr;
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right: Creator & Event Host Pitch -->
+                    <div id="creators" class="bg-gradient-to-br from-rose-50 to-pink-50 border border-rose-200 rounded-3xl p-6 sm:p-8 space-y-4">
+                        <span class="text-pink-700 font-bold uppercase tracking-wider text-xs">For Creators & Event Hosts</span>
+                        <h3 class="text-2xl font-extrabold text-slate-900">Monetize Your Views & Physical Event Backdrop Spaces</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Have high follower counts or hosted events with big footfall? Turn your physical backdrop walls, YouTube sets, TikTok videos, and blog readership into steady corporate advertising revenue.
+                        </p>
+
+                        <!-- Limits / Criteria Box -->
+                        <div class="bg-white border border-rose-200 rounded-2xl p-4 space-y-2 text-xs">
+                            <h4 class="font-bold text-brand-700 uppercase font-mono text-[11px]">Minimum Qualification Criteria to Join:</h4>
+                            <ul class="space-y-1.5 text-slate-700">
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span> <strong>5,000+ Followers</strong> (TikTok, IG, FB, YouTube)</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span> <strong>25,000+ Monthly Views or Event Footfall</strong></li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span> <strong>Supported Regions:</strong> Kenya, East Africa, Nigeria, SA, Global</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span> <strong>Category Niche:</strong> Tech, Business, Lifestyle, Sports, Entertainment</li>
+                            </ul>
+                        </div>
+
+                        <button onclick="openCreatorModal()" class="w-full py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl transition text-center block">
+                            Apply & Submit Channel / Event Inventory
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- GOOGLE ADS & SPONSORED BLOG CONTENT SECTION -->
+        <section id="google-ads" class="py-16 bg-slate-900 text-white border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <span class="text-pink-400 font-mono text-xs font-bold uppercase tracking-widest">Digital Amplification</span>
+                    <h2 class="text-3xl font-extrabold mt-1">Google Ads Content & Blog Integration</h2>
+                    <p class="text-slate-300 text-sm mt-2">
+                        We don't stop at physical backdrop walls and social media posts. We wrap every campaign in continuous digital retargeting using Google Ads Display network placements and high-authority blog publications.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-pink-500/20 text-pink-400 font-bold flex items-center justify-center text-lg mb-2">🎯</div>
+                        <h3 class="font-bold text-white text-base">Google Ads Display Network</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Convert attendees who viewed your physical event backdrop into online buyers by retargeting them across high-traffic local and regional news websites via Google Ads.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-pink-500/20 text-pink-400 font-bold flex items-center justify-center text-lg mb-2">✍️</div>
+                        <h3 class="font-bold text-white text-base">Sponsored Blog Articles</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Publish in-depth editorial articles covering your event press conference or brand announcement across top African business and tech blogs with embedded backlinks.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-pink-500/20 text-pink-400 font-bold flex items-center justify-center text-lg mb-2">📊</div>
+                        <h3 class="font-bold text-white text-base">Native Website Backdrops</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Take over website headers with high-impact digital backdrop skins that match your physical red carpet branding for maximum visual coherence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KNOWLEDGE HUB & BLOG SECTION -->
+        <section id="blog" class="py-16 bg-white border-b border-rose-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
+                    <div>
+                        <span class="text-brand-600 font-bold uppercase tracking-wider text-xs">Insights & Strategies</span>
+                        <h2 class="text-3xl font-extrabold text-slate-900 mt-1">The backdrop.online Blog</h2>
+                    </div>
+                    <a href="#blog" class="mt-2 sm:mt-0 text-xs font-bold text-brand-600 hover:underline flex items-center gap-1">
+                        View All Articles &rarr;
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Article 1 -->
+                    <article class="bg-slate-50 border border-rose-100 rounded-2xl overflow-hidden hover:shadow-md transition group">
+                        <div class="h-44 bg-gradient-to-r from-rose-500 to-pink-600 relative p-6 flex items-end">
+                            <span class="bg-white/90 backdrop-blur-xs text-brand-800 text-[10px] font-bold px-2.5 py-1 rounded-md font-mono">Physical Backdrops</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <span class="text-[11px] font-mono text-slate-400">May 2027 • 4 min read</span>
+                            <h3 class="font-bold text-slate-900 text-lg group-hover:text-brand-600 transition">How Physical Backdrop Bidding Drives 5x Social Amplification</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Why corporate brands are competing for red carpet photo wall logo placements to capture secondary views across news broadcasts and social media reels.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="bg-slate-50 border border-rose-100 rounded-2xl overflow-hidden hover:shadow-md transition group">
+                        <div class="h-44 bg-gradient-to-r from-red-600 to-rose-700 relative p-6 flex items-end">
+                            <span class="bg-white/90 backdrop-blur-xs text-brand-800 text-[10px] font-bold px-2.5 py-1 rounded-md font-mono">Creator Monetization</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <span class="text-[11px] font-mono text-slate-400">May 2027 • 5 min read</span>
+                            <h3 class="font-bold text-slate-900 text-lg group-hover:text-brand-600 transition">From Studio Backdrops to Brand Sponsorships: A Creator's Guide</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                How YouTubers and TikTok creators with 20K+ views can sell studio backdrop wall space to corporate sponsors without disrupting content flow.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="bg-slate-50 border border-rose-100 rounded-2xl overflow-hidden hover:shadow-md transition group">
+                        <div class="h-44 bg-gradient-to-r from-pink-600 to-rose-500 relative p-6 flex items-end">
+                            <span class="bg-white/90 backdrop-blur-xs text-brand-800 text-[10px] font-bold px-2.5 py-1 rounded-md font-mono">Google Ads & Web</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <span class="text-[11px] font-mono text-slate-400">April 2027 • 6 min read</span>
+                            <h3 class="font-bold text-slate-900 text-lg group-hover:text-brand-600 transition">Combining Google Ads Content with Real-World Backdrop Sponsorships</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                A step-by-step playbook for corporate marketing directors looking to run hybrid physical and digital retargeting campaigns across East Africa.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-brand-600 to-pink-500 text-white font-mono font-bold text-sm flex items-center justify-center">b.</div>
+                        <span class="font-extrabold text-lg text-white tracking-tight">backdrop<span class="text-brand-500">.online</span></span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        The advertising agent and bidding marketplace connecting corporate brands with physical event backdrops, social creators, websites, and Google Ads placements.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-mono font-bold text-slate-200 uppercase tracking-wider mb-3">Marketplace Channels</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#marketplace" class="hover:text-white transition">Physical Event Backdrops</a></li>
+                        <li><a href="#marketplace" class="hover:text-white transition">YouTube Studio Sponsorships</a></li>
+                        <li><a href="#marketplace" class="hover:text-white transition">TikTok & IG Reels</a></li>
+                        <li><a href="#google-ads" class="hover:text-white transition">Google Ads & Sponsored Blogs</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-mono font-bold text-slate-200 uppercase tracking-wider mb-3">Participation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#qualification" class="hover:text-white transition">Creator Qualification Limits</a></li>
+                        <li><a href="#advertisers" class="hover:text-white transition">Corporate Advertiser Solutions</a></li>
+                        <li><a href="#blog" class="hover:text-white transition">Advertising Blog & Playbooks</a></li>
+                        <li><a href="javascript:void(0)" onclick="openLoginModal()" class="hover:text-white transition">Account Portal Login</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-mono font-bold text-slate-200 uppercase tracking-wider mb-3">Regional Hubs</h4>
+                    <p class="text-xs text-slate-400 mb-3">Nairobi, Kenya • Kampala • Dar es Salaam • Lagos • Global Exchange</p>
+                    <button onclick="openAdvertiserModal()" class="w-full px-3 py-2 bg-gradient-to-r from-brand-600 to-pink-600 text-white text-xs font-bold rounded-xl shadow-xs">
+                        Post Campaign Brief
+                    </button>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+                <p>&copy; 2027 backdrop.online. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-400">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL 1: QUICK BID MODAL -->
+    <div id="bid-modal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative border border-rose-100">
+            <button onclick="closeBidModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 font-bold text-lg">&times;</button>
+            <span class="text-xs font-mono font-bold text-brand-600 uppercase bg-rose-100 px-2.5 py-0.5 rounded-full">Physical Backdrop Bid</span>
+            <h3 class="text-xl font-bold text-slate-900 mt-2" id="modal-event-title">Event Title</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Submit your brand's competitive bid for backdrop space logo placement.</p>
+
+            <form onsubmit="handleBidSubmit(event)" class="mt-5 space-y-3.5 text-xs">
+                <input type="hidden" id="modal-backdrop-id">
+                <div>
+                    <label class="block font-bold text-slate-700 mb-1">Company / Brand Name</label>
+                    <input type="text" id="bidder-name" required placeholder="e.g. Safaricom / KCB / Coke" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-600">
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-700 mb-1">Your Bid Amount (KSh)</label>
+                    <input type="number" id="bid-amount-input" required class="w-full px-3 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-600 font-mono text-sm">
+                    <span class="text-[11px] text-slate-500 mt-1 block" id="modal-min-bid-hint"></span>
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-700 mb-1">Official Corporate Contact Email</label>
+                    <input type="email" id="bidder-contact" required placeholder="marketing@company.com" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-600">
+                </div>
+                <button type="submit" class="w-full py-3 bg-gradient-to-r from-brand-600 via-rose-600 to-pink-600 text-white font-bold text-sm rounded-xl shadow-md transition">
+                    Confirm & Submit Bid
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL 2: CORPORATE ADVERTISER CAMPAIGN BRIEF FORM -->
+    <div id="advertiser-modal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-rose-100 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeAdvertiserModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 font-bold text-lg">&times;</button>
+            <span class="text-xs font-mono font-bold text-brand-600 uppercase bg-rose-100 px-2.5 py-0.5 rounded-full">Corporate Advertiser Brief</span>
+            <h3 class="text-2xl font-extrabold text-slate-900 mt-2">Launch Advertising Campaign</h3>
+            <p class="text-xs text-slate-500 mt-1">Short 1-minute form to connect with top backdrops, creators, websites, and Google Ads content.</p>
+
+            <form onsubmit="handleAdvertiserSubmit(event)" class="mt-5 space-y-3.5 text-xs">
+                <div>
+                    <label class="block font-bold text-slate-700 mb-1">Company / Corporate Name</label>
+                    <input type="text" id="adv-company" required placeholder="e.g. Equity Bank / Kenya Airways" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-600">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">Target Media Channel</label>
+                        <select id="adv-channel" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-600">
+                            <option value="Physical Event Backdrops">🏛️ Physical Event Backdrops</option>
+                            <option value="YouTube Creator Sponsorship">📹 YouTube Creator Integration</option>
+                            <option value="TikTok & IG Reels">🎵 TikTok & IG Reels</option>
+                            <option value="Website Banners & Google Ads">🌐 Web Banner & Google Ads</option>
+                            <option value="Sponsored Blog Articles">✍️ Sponsored Blog Articles</option>
+                            <option value="Omnichannel Bundle (All)">🔥 Omnichannel Bundle (All)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">Target Country / Region</label>
+                        <select id="adv-region" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-600">
+                            <option value="Kenya">Kenya</option>
+                            <option value="East Africa">East Africa (Regional)</option>
+                            <option value="Pan-Africa">Pan-Africa</option>
+                            <option value="Global">Global</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">Estimated Budget Range</label>
+                        <select id="adv-budget" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-600">
+                            <option value="KSh 50k - KSh 150k">KSh 50,000 - KSh 150,000</option>
+                            <option value="KSh 150k - KSh 500k">KSh 150,000 - KSh 500,000</option>
+                            <option value="KSh 500k - KSh 2M">KSh 500,000 - KSh 2,000,000</option>
+                            <option value="KSh 2M+ Corporate">KSh 2,000,000+ Corporate</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">Industry Field / Niche</label>
+                        <input type="text" id="adv-niche" required placeholder="e.g. Fintech / Telco / FMCG" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-600">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-bold text-slate-700 mb-1">Work Email / Direct Phone</label>
+                    <input type="text" id="adv-contact" required placeholder="marketing@company.com / +254..." class="w-full px-3 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-600">
+                </div>
+
+                <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-brand-600 via-red-600 to-pink-600 text-white font-bold text-sm rounded-xl shadow-lg transition">
+                    Submit Campaign Brief to Agent
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL 3: CREATOR / INVENTORY OWNER ONBOARDING MODAL -->
+    <div id="creator-modal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-rose-100 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeCreatorModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 font-bold text-lg">&times;</button>
+            <span class="text-xs font-mono font-bold text-pink-700 uppercase bg-pink-100 px-2.5 py-0.5 rounded-full">Creator & Host Qualification Form</span>
+            <h3 class="text-2xl font-extrabold text-slate-900 mt-2">List Your Event or Channel</h3>
+            <p class="text-xs text-slate-500 mt-1">Must meet limits: 5,000+ followers or 25,000+ monthly views/footfall.</p>
+
+            <form onsubmit="handleCreatorSubmit(event)" class="mt-5 space-y-3.5 text-xs">
+                <div>
+                    <label class="block font-bold text-slate-700 mb-1">Channel or Event Name</label>
+                    <input type="text" id="cr-name" required placeholder="e.g. TechBytes YT Channel or East Africa Business Summit" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-600">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">Platform Category</label>
+                        <select id="cr-platform" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-600">
+                            <option value="Physical Event Backdrop">🏛️ Physical Event Backdrop Space</option>
+                            <option value="YouTube Channel">📹 YouTube Channel</option>
+                            <option value="TikTok Account">🎵 TikTok Account</option>
+                            <option value="Instagram / Facebook Page">📸 Instagram / Facebook Page</option>
+                            <option value="Website / Blog Site">🌐 Website / Blog</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">Followers or Monthly Views</label>
+                        <input type="number" id="cr-count" required placeholder="Must be > 5,000" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-600 font-mono">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">Primary Country</label>
+                        <select id="cr-country" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-600">
+                            <option value="Kenya">Kenya</option>
+                            <option value="Uganda">Uganda</option>
+                            <option value="Tanzania">Tanzania</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="South Africa">South Africa</option>
+                            <option value="Global">Global / International</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">Content Field / Niche</label>
+                        <input type="text" id="cr-niche" required placeholder="e.g. Technology, Lifestyle, Corporate" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-600">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-bold text-slate-700 mb-1">Channel URL or Event Backdrop Photo Link</label>
+                    <input type="text" id="cr-link" placeholder="https://youtube.com/@yourchannel or drive link" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-600">
+                </div>
+
+                <button type="submit" class="w-full py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm rounded-xl shadow-lg transition">
+                    Submit Inventory for Review
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL 4: LOGIN / SIGNUP DRAWER -->
+    <div id="login-modal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl relative border border-rose-100">
+            <button onclick="closeLoginModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 font-bold text-lg">&times;</button>
+            
+            <div class="text-center mb-5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-pink-500 text-white font-mono font-bold text-base flex items-center justify-center mx-auto mb-2">b.</div>
+                <h3 class="text-xl font-bold text-slate-900">Sign In to backdrop.online</h3>
+                <p class="text-xs text-slate-500 mt-0.5">Access your corporate bids or creator earnings</p>
+            </div>
+
+            <form onsubmit="handleLoginSubmit(event)" class="space-y-3.5 text-xs">
+                <div>
+                    <label class="block font-bold text-slate-700 mb-1">Email Address</label>
+                    <input type="email" required placeholder="user@domain.com" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-600">
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-700 mb-1">Password</label>
+                    <input type="password" required placeholder="••••••••" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-600">
+                </div>
+                <button type="submit" class="w-full py-3 bg-gradient-to-r from-brand-600 to-pink-600 text-white font-bold text-xs rounded-xl shadow-md">
+                    Log In to Dashboard
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FLOATING CHAT WIDGET ("Backdrop Agent Concierge") -->
+    <div id="chat-container" class="fixed bottom-5 right-5 z-50">
+        <!-- Trigger Button -->
+        <button onclick="toggleChatWindow()" class="w-14 h-14 bg-gradient-to-tr from-brand-600 via-red-600 to-pink-500 text-white rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-105 relative">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+            <span class="absolute top-0 right-0 w-3.5 h-3.5 bg-emerald-500 border-2 border-white rounded-full"></span>
+        </button>
+
+        <!-- Chat Box Window -->
+        <div id="chat-box" class="hidden absolute bottom-16 right-0 w-[90vw] sm:w-96 bg-white rounded-3xl shadow-2xl border border-rose-100 overflow-hidden flex flex-col h-[460px]">
+            <!-- Header -->
+            <div class="bg-gradient-to-r from-slate-900 via-brand-900 to-slate-900 text-white p-4 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-brand-600 to-pink-500 font-mono font-bold flex items-center justify-center text-xs">
+                        ba
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-xs">Backdrop Agent Concierge</h4>
+                        <span class="text-[10px] text-pink-300 block font-mono">Ad Bidding Support</span>
+                    </div>
+                </div>
+                <button onclick="toggleChatWindow()" class="text-slate-400 hover:text-white font-bold text-lg">&times;</button>
+            </div>
+
+            <!-- Messages Log -->
+            <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 bg-rose-50/30 text-xs">
+                <div class="bg-white border border-rose-100 rounded-2xl p-3 shadow-xs max-w-[85%] text-slate-800">
+                    👋 Jambo! Welcome to <strong>backdrop.online</strong>. How can I assist your brand or channel with advertising space bidding today?
+                </div>
+            </div>
+
+            <!-- Quick Pill Buttons -->
+            <div class="p-2 bg-white border-t border-rose-100 flex flex-wrap gap-1 text-[11px]">
+                <button onclick="sendQuickMessage('I am a corporate brand wanting to bid on event backdrops')" class="bg-rose-50 hover:bg-rose-100 text-brand-800 px-2.5 py-1 rounded-lg transition">🏛️ Bid on Backdrops</button>
+                <button onclick="sendQuickMessage('I am a creator looking to join as a influencer partner')" class="bg-rose-50 hover:bg-rose-100 text-brand-800 px-2.5 py-1 rounded-lg transition">🎵 Creator Signup</button>
+            </div>
+
+            <!-- Input Bar -->
+            <form onsubmit="handleChatSubmit(event)" class="p-3 bg-white border-t border-rose-100 flex gap-2">
+                <input type="text" id="chat-input" placeholder="Type message..." required class="flex-1 px-3 py-2 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-brand-600">
+                <button type="submit" class="px-3.5 py-2 bg-gradient-to-r from-brand-600 to-pink-600 text-white font-bold text-xs rounded-xl shadow-xs">
+                    Send
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast-container" class="fixed top-20 right-5 z-50 space-y-2 pointer-events-none"></div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- 1. Mobile Menu Toggle ---
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // --- 2. Qualification Checker Engine ---
+        function checkQualification(e) {
+            e.preventDefault();
+            const count = parseInt(document.getElementById('qual-count').value, 10);
+            const type = document.getElementById('qual-type').value;
+            const platform = document.getElementById('qual-platform').value;
+            const country = document.getElementById('qual-country').value;
+
+            const resBox = document.getElementById('qual-result');
+            const statusBadge = document.getElementById('qual-status-badge');
+            const statusMsg = document.getElementById('qual-status-msg');
+            const ctaBox = document.getElementById('qual-cta-box');
+
+            resBox.classList.remove('hidden');
+
+            if (count >= 5000) {
+                statusBadge.className = "inline-block px-3 py-1 rounded-full text-xs font-bold font-mono bg-emerald-500 text-white";
+                statusBadge.innerText = "✓ QUALIFIED TO LIST";
+                
+                let rateEstimate = Math.round(count * 0.15);
+                if (rateEstimate < 20000) rateEstimate = 25000;
+
+                statusMsg.innerHTML = `Congratulations! Your <strong>${platform}</strong> channel/space in <strong>${country}</strong> meets our quality threshold. Estimated placement value: <strong>KSh ${rateEstimate.toLocaleString()} per campaign</strong>.`;
+                ctaBox.innerHTML = `<button onclick="openCreatorModal()" class="px-5 py-2 bg-white text-slate-900 text-xs font-bold rounded-xl shadow-md">Complete Qualification Registration &rarr;</button>`;
+            } else {
+                statusBadge.className = "inline-block px-3 py-1 rounded-full text-xs font-bold font-mono bg-amber-500 text-white";
+                statusBadge.innerText = "⚠️ BELOW MINIMUM THRESHOLD";
+                statusMsg.innerHTML = `backdrop.online requires a minimum of <strong>5,000 followers</strong> or <strong>25,000 monthly views</strong> to maintain corporate advertiser standards. (Current: ${count.toLocaleString()}).`;
+                ctaBox.innerHTML = `<button onclick="openChatWithPrompt('I need help growing my channel views to qualify for backdrop.online')" class="px-4 py-2 bg-pink-500 text-white text-xs font-bold rounded-xl">Ask Agent for Growth Requirements</button>`;
+            }
+        }
+
+        // --- 3. Marketplace Filtering ---
+        function filterMarketplace(category) {
+            document.querySelectorAll('.m-tab').forEach(btn => {
+                btn.classList.remove('bg-gradient-to-r', 'from-brand-600', 'to-pink-600', 'text-white', 'shadow-xs');
+                btn.classList.add('text-slate-600');
+            });
+
+            const activeBtn = document.getElementById(`tab-${category}`);
+            if (activeBtn) {
+                activeBtn.classList.add('bg-gradient-to-r', 'from-brand-600', 'to-pink-600', 'text-white', 'shadow-xs');
+                activeBtn.classList.remove('text-slate-600');
+            }
+
+            const cards = document.querySelectorAll('.m-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // --- 4. Modals Control ---
+        function openBidModal(id, title, minBid) {
+            document.getElementById('modal-backdrop-id').value = id;
+            document.getElementById('modal-event-title').innerText = title;
+            document.getElementById('bid-amount-input').value = minBid + 15000;
+            document.getElementById('modal-min-bid-hint').innerText = `Current high bid is KSh ${minBid.toLocaleString()}. Next min bid: KSh ${(minBid + 5000).toLocaleString()}`;
+            document.getElementById('bid-modal').classList.remove('hidden');
+        }
+        function closeBidModal() { document.getElementById('bid-modal').classList.add('hidden'); }
+
+        function openAdvertiserModal() { document.getElementById('advertiser-modal').classList.remove('hidden'); }
+        function openAdvertiserModalWithPreselect(slotName) {
+            openAdvertiserModal();
+            showToast(`Pre-selected: ${slotName}`, 'info');
+        }
+        function closeAdvertiserModal() { document.getElementById('advertiser-modal').classList.add('hidden'); }
+
+        function openCreatorModal() { document.getElementById('creator-modal').classList.remove('hidden'); }
+        function closeCreatorModal() { document.getElementById('creator-modal').classList.add('hidden'); }
+
+        function openLoginModal() { document.getElementById('login-modal').classList.remove('hidden'); }
+        function closeLoginModal() { document.getElementById('login-modal').classList.add('hidden'); }
+
+        // --- 5. Form Submissions ---
+        function handleBidSubmit(e) {
+            e.preventDefault();
+            const id = document.getElementById('modal-backdrop-id').value;
+            const bidder = document.getElementById('bidder-name').value;
+            const amount = parseInt(document.getElementById('bid-amount-input').value, 10);
+
+            const display = document.getElementById(`card-bid-${id}`);
+            if (display) display.innerText = `KSh ${amount.toLocaleString()}`;
+
+            closeBidModal();
+            showToast(`🎉 Bid of KSh ${amount.toLocaleString()} placed for ${bidder}!`, 'success');
+        }
+
+        function handleAdvertiserSubmit(e) {
+            e.preventDefault();
+            const company = document.getElementById('adv-company').value;
+            closeAdvertiserModal();
+            showToast(`🚀 Brief received for ${company}! A backdrop agent will reach out in < 2 hrs.`, 'success');
+        }
+
+        function handleCreatorSubmit(e) {
+            e.preventDefault();
+            const count = parseInt(document.getElementById('cr-count').value, 10);
+            const name = document.getElementById('cr-name').value;
+
+            if (count < 5000) {
+                showToast(`Qualification Warning: Followers/views must be at least 5,000.`, 'error');
+                return;
+            }
+
+            closeCreatorModal();
+            showToast(`Application submitted for ${name}! Verification pending.`, 'success');
+        }
+
+        function handleLoginSubmit(e) {
+            e.preventDefault();
+            closeLoginModal();
+            showToast(`Successfully logged in to backdrop.online portal.`, 'success');
+        }
+
+        // --- 6. Floating Chat Concierge ---
+        function toggleChatWindow() { document.getElementById('chat-box').classList.toggle('hidden'); }
+
+        function openChatWithPrompt(prompt) {
+            const chatBox = document.getElementById('chat-box');
+            if (chatBox.classList.contains('hidden')) chatBox.classList.remove('hidden');
+            sendQuickMessage(prompt);
+        }
+
+        function sendQuickMessage(text) {
+            appendChatMessage(text, 'user');
+            setTimeout(() => {
+                let botReply = "Thank you! Our backdrop.online agent team will analyze your request and guide your bidding process.";
+                if (text.includes('bid') || text.includes('corporate')) {
+                    botReply = "For corporate backdrop bids, we handle physical printing, on-site setup, press media verification, and digital Google Ads retargeting.";
+                } else if (text.includes('creator') || text.includes('Signup') || text.includes('grow')) {
+                    botReply = "Creator partners must have 5k+ followers or 25k+ monthly views. We connect you directly with corporate brands seeking sponsorships.";
+                }
+                appendChatMessage(botReply, 'bot');
+            }, 600);
+        }
+
+        function handleChatSubmit(e) {
+            e.preventDefault();
+            const input = document.getElementById('chat-input');
+            const text = input.value.trim();
+            if (!text) return;
+            sendQuickMessage(text);
+            input.value = '';
+        }
+
+        function appendChatMessage(text, sender) {
+            const box = document.getElementById('chat-messages');
+            const bubble = document.createElement('div');
+            bubble.className = sender === 'user' 
+                ? 'bg-gradient-to-r from-brand-600 to-pink-600 text-white rounded-2xl p-3 shadow-xs max-w-[85%] ml-auto text-xs font-medium' 
+                : 'bg-white border border-rose-100 rounded-2xl p-3 shadow-xs max-w-[85%] text-slate-800 text-xs';
+            bubble.innerHTML = text;
+            box.appendChild(bubble);
+            box.scrollTop = box.scrollHeight;
+        }
+
+        // --- 7. Toast Notification Utility ---
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            const bgColor = type === 'success' ? 'bg-emerald-600' : type === 'error' ? 'bg-red-600' : 'bg-slate-900';
+            toast.className = `${bgColor} text-white px-4 py-3 rounded-2xl shadow-2xl text-xs font-bold flex items-center gap-2 transition-all duration-300 pointer-events-auto`;
+            toast.innerHTML = `<span>${message}</span>`;
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 300);
+            }, 3200);
+        }
+    </script>
+</body>
+</html>
